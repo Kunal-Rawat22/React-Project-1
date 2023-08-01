@@ -18,7 +18,7 @@ function App() {
       id: "e3",
       title: "Car Insurance",
       amount: 294.67,
-      date: new Date(2021, 2, 28)
+      date: new Date(2019, 2, 28)
     },
     {
       id: "e4",
@@ -27,9 +27,15 @@ function App() {
       date: new Date(2021, 5, 12)
     },
   ];
+
+  const addExpenseHandler = (expense) => {
+    console.log("Inside App.jsx");
+    console.log(expense);
+  } 
+  console.log(expenses);
   return (
     <div>
-      <NewExpense />
+      <NewExpense addExpense={addExpenseHandler} />
       <ExpenseItems expenses={expenses} />
     </div>
   );
